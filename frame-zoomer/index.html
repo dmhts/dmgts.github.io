@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>FrameZoomer | The demo page</title>
+		<script src="build/frame-zoomer.min.js"></script>
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+	
+		<div class="page">
+			<h1>FrameZoomer</h1>
+			
+			<p>FrameZoomer lets to zoom up certain portions of an image. It doesn't need any dependencies and it will be especially usefull if you need to zoom in and highlight some recognized or pre-defined parts of an image with animation.</p>
+			
+			<p>Latest version: 0.1.0</p>
+			
+			<div class="btn-group-sm">
+				<a href="https://github.com/dmgts/frame-zoomer/archive/master.zip" class="btn btn-success" target="_blank">Download</a>
+				<a href="https://github.com/dmgts/frame-zoomer/" class="btn btn-info" target="_blank">Project on Github</a>
+			</div>
+		
+			<img id="image" src="business-card.jpg" alt="Image" />
+			<div class="btn-group-sm">
+				<h4>Click to zoom in:</h4>
+				<button type="button" class="btn btn-default" onclick="frameZoomer.zoomIn(143, 90, 418, 94);">Name</button>
+				<button type="button" class="btn btn-default" onclick="frameZoomer.zoomIn(143, 198, 320, 28);">Position</button>
+				<button type="button" class="btn btn-default" onclick="frameZoomer.zoomIn(322, 628, 230, 57);">Address</button>
+				<button type="button" class="btn btn-default" onclick="frameZoomer.zoomIn(848, 590, 305, 95);">Contact info</button>
+				
+				<h4>Click to zoom out:</h4>
+				<button type="button" class="btn btn-default" onclick="frameZoomer.zoomOut();">Reset</button>
+			</div>
+		</div>
+
+		<script>
+			frameZoomer = new FrameZoomer({
+				image: window.document.getElementById('image'),
+				zoomRatio: 1,
+				animationDuration: 1000,
+				zoomWindow: {
+					width: 550,
+					height: 330
+				},
+				framePadding: 10
+			});
+		</script>
+	</body>
+</html>

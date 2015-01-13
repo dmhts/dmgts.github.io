@@ -1,0 +1,39 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+	background-image: url(../img/noisy_grid_@2X.png);
+	background-repeat: repeat;
+}
+   
+.page{
+	width: 550px;
+	margin: 0 auto;
+	
+}
+
+.btn-group-sm{
+	margin-bottom: 15px;
+}
+
+#zoomWindow{
+	border: 1px #ccc solid;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
